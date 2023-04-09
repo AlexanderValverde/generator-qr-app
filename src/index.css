@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,151 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #4a4949;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  background: #000;
+  border-radius: 20px;
+  height: 650px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #aaa9a9;
+  padding: 10px;
+}
+.content-title-app {
+  margin-top: 65px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.title-app {
+  font-size: 30px;
+  color: #140d48;
+  font-weight: 600;
+}
+.content-input {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;  background: #fff;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+  padding: 0 15px;
+}
+.input-url {
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px 0;
+  height: 45px;
+  border: none;
+  background: #fff;
+  font-size: 14px;
+}
+.input-url:focus {
+  outline: none;
+}
+.button {
+  cursor: pointer;
+  justify-content: space-between;
+}
+.icon-close {
+  font-size: 25px;
+}
+.content-options {
+  margin: 25px 0;
+  width: 100%;
+}
+.input-options {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.content-options img{
+  display: none;
+}
+.colors {
+  width: 50px;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+.content-qr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.generator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.qr {
+  flex: 1;
+}
+.download {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.title-download {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.btn-png, 
+.btn-pdf,
+.btn-svg {
+  font-size: 35px;
+  margin: 20px;
+}
+.btn-png {
+  color: rgb(8, 164, 37);
+}
+.btn-pdf {
+  color: red;
+}
+.btn-svg {
+  color: blueviolet;
+}
+.button-download {
+  height: 30px;
+  background: rgb(66, 89, 218);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 60px;
+  width: 200px;
+  cursor: pointer;
 }

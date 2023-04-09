@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { GeneratorQR } from './components/GeneratorQR';
+import { InputUrl } from './components/InputUrl';
+import { Options } from './components/Options';
+import { Title } from './components/Title';
 
 function App() {
+
+  const [url, setUrl] = useState('');
+  const [color, setColor] = useState('#000000');
+  const [validate, setValidate] = useState(false);
+
+  function getUrl(urlinput) {
+    if (urlinput.length > 0) {
+      setUrl(urlinput);
+      setValidate(true);
+    }else{
+      setValidate(false);
+    }
+  }
+
+  function getColor(colorinput) {
+    setColor(colorinput);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <div className='main-container'>
+          <Title />
+          <InputUrl getUrl={getUrl} validate={validate} />
+          <Options getColor={getColor} />
+          <GeneratorQR urlGenerate={url} color={color} validate={validate} />
+        </div>
+      </div>
     </div>
-  );
-}
+  )
+} 
 
 export default App;
